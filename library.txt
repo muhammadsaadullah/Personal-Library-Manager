@@ -1,0 +1,10 @@
+{"Title":"The Great Gatsby","Author":"F. Scott Fitzgerald","Year":1925,"Genre":["Novel","Literary Fiction"],"Tags":["fiction"],"Read":true}
+{"Title":"1984","Author":"George Orwell","Year":1949,"Genre":["Dystopian","Science Fiction"],"Tags":["fiction","sci-fi"],"Read":false}
+{"Title":"To Kill a Mockingbird","Author":"Harper Lee","Year":1960,"Genre":["Novel","Historical Fiction"],"Tags":["fiction","history"],"Read":true}
+{"Title":"Sapiens","Author":"Yuval Noah Harari","Year":2011,"Genre":["Non-fiction","History"],"Tags":["history","non-fiction"],"Read":false}
+{"Title":"Pride and Prejudice","Author":"Jane Austen","Year":1813,"Genre":["Romance","Classic"],"Tags":["romance","fiction"],"Read":true}
+{"Title":"The Catcher in the Rye","Author":"J.D. Salinger","Year":1951,"Genre":["Novel","Young Adult"],"Tags":["fiction","classic"],"Read":false}
+{"Title":"The Hobbit","Author":"J.R.R. Tolkien","Year":1937,"Genre":["Fantasy","Adventure"],"Tags":["fantasy","adventure"],"Read":true}
+{"Title":"Moby-Dick","Author":"Herman Melville","Year":1851,"Genre":["Adventure","Classic"],"Tags":["classic","adventure"],"Read":false}
+{"Title":"War and Peace","Author":"Leo Tolstoy","Year":1869,"Genre":["Historical Fiction","Classic"],"Tags":["history","fiction"],"Read":false}
+{"Title":"Brave New World","Author":"Aldous Huxley","Year":1932,"Genre":["Dystopian","Science Fiction"],"Tags":["sci-fi","dystopian"],"Read":true}
