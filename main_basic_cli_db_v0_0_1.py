@@ -1,5 +1,4 @@
 import os
-import json
 import datetime
 import time
 from pymongo import MongoClient

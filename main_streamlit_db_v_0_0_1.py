@@ -1,4 +1,3 @@
-import json
 import datetime
 import streamlit as st
 import pandas as pd
@@ -6,7 +5,7 @@ from pymongo import MongoClient
 
 
 @st.cache_data(ttl=300)  # Cache for 5 minutes
-def fetch_books(query={}):
+def load_library(query={}):
     return list(collection.find(query, {"_id": 0}))
 
 # MongoDB Connection
@@ -50,7 +49,12 @@ def is_valid_year(year):
 st.set_page_config(layout="wide")  # Make display wide
 st.title("📚 Personal Library Manager")
 
-library = load_library()
+if "library" not in st.session_state:
+    with st.spinner("Loading Library..."):
+        st.session_state.library = load_library()
+
+library = st.session_state.library  
+
 menu = st.radio("Select an Option:", ["Add Book", "Remove Book", "Search Book", "Display All Books", "Statistics"], horizontal=True)
 
 if menu == "Add Book":
@@ -82,6 +86,7 @@ if menu == "Add Book":
                     }
                     library.append(new_book)
                     save_library(library)
+                    library = st.session_state.library = load_library()  
                     st.success("Book added successfully!")
             else:
                 new_book = {
@@ -94,6 +99,7 @@ if menu == "Add Book":
                 }
                 library.append(new_book)
                 save_library(library)
+                library = st.session_state.library = load_library()  
                 st.success("Book added successfully!")
         else:
             st.error("Please enter valid book details!")
@@ -109,6 +115,7 @@ elif menu == "Remove Book":
             else:
                 library = [book for book in library if book["Title"] != selected_book]
                 save_library(library)
+                library = st.session_state.library = load_library()  
                 st.success("Book removed successfully!")
     else:
         st.info("No books available to remove.")
